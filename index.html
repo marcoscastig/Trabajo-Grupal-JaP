@@ -7,6 +7,9 @@
   <meta name="description" content="">
   <title>Registro</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -21,33 +24,43 @@
           <form action="" id="registro">
           <div class="row g-3">
             <div class="col-sm-6">
-              <label for="nombre" class="form-label">Nombre</label>
+              <label for="nombre" class="form-label">Nombre <span class="requerido">*</span></label>
               <input type="text" class="form-control" id="nombre" name="user">
             </div>
 
             <div class="col-sm-6">
-              <label for="apellido" class="form-label">Apellido</label>
+              <label for="apellido" class="form-label">Apellido <span class="requerido">*</span></label>
               <input type="text" class="form-control" id="apellido" name="lastname">
             </div>
 
             <div class="col-12">
-              <label for="email" class="form-label">Email</label>
+              <label for="email" class="form-label">Email <span class="requerido">*</span></label>
               <input type="text" class="form-control" id="email" name="email">
             </div>
 
             <div class="col-sm-6">
-              <label for="password1" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="password1" name="password1">
+              <label for="password1" class="form-label">Contraseña <span class="requerido">*</span> </label>
+              <div class="input-group">
+                <input ID="password1" type="password" Class="form-control" name="password1">
+                <div class="input-group-append">
+                      <button id="show_password" class="btn btn-primary" type="button" onclick="mostrarPassword()"> <span class="fa fa-eye-slash icon"></span> </button>
+                    </div>
+              </div>
             </div>
 
             <div class="col-sm-6">
-              <label for="password2" class="form-label">Repetir contraseña</label>
-              <input type="password" class="form-control" id="password2" name="password2">
+              <label for="password2" class="form-label">Repetir contraseña <span class="requerido">*</span></label>
+              <div class="input-group">
+                <input ID="password2" type="password" Class="form-control" name="password2">
+                <div class="input-group-append">
+                      <button id="show_password" class="btn btn-primary" type="button" onclick="mostrarPassword2()"> <span class="fa fa-eye-slash icon"></span> </button>
+                    </div>
+              </div>
             </div>
 
             <div class="form-check">
               <input type="checkbox" class="form-check-input" id="terminos" name="terminos">
-              <label class="form-check-label" for="terminos">Acepto los términos y condiciones del servicio.</label>
+              <label class="form-check-label" for="terminos">Acepto los términos y condiciones del servicio. <span class="requerido">*</span></label>
             </div>
 
             <button class="btn btn-primary" type="button" id="regBtn">Registrarme</button>
